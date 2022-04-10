@@ -1,11 +1,9 @@
 import '../style.css';
 
-const conversionButton = document.createElement('button');
-
 function conversion(){
     // function to convert between celcius and fahrenheit
-conversionButton.addEventListener('click', ()=> {
     // get nodes
+    const conversionButton = document.getElementById('conversion-button');
     const elementsOfTemp = document.querySelectorAll('.temp');
 
     if (conversionButton.textContent === 'C°') {
@@ -30,7 +28,6 @@ conversionButton.addEventListener('click', ()=> {
         conversionButton.textContent = 'C°';
         return;
     }
-});
 }
 
 export { conversion };

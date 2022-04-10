@@ -33,6 +33,7 @@ async function getWeather() {
         errorDiv.textContent = "";
 
         // naming
+        console.log(weatherData.main.temp);
         tempDiv.textContent = `${(weatherData.main.temp - 273.15).toFixed(1)}°`;
         locationDiv.textContent = `${weatherData.name} | ${weatherData.sys.country}`;
         mainWeather.textContent = `${weatherData.weather[0].main}`;
