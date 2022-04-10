@@ -33,7 +33,7 @@ async function getWeather() {
         errorDiv.textContent = "";
 
         // naming
-        console.log(weatherData.main.temp);
+        console.log(weatherData.sys.country);
         tempDiv.textContent = `${(weatherData.main.temp - 273.15).toFixed(1)}°`;
         locationDiv.textContent = `${weatherData.name} | ${weatherData.sys.country}`;
         mainWeather.textContent = `${weatherData.weather[0].main}`;
@@ -45,6 +45,10 @@ async function getWeather() {
         minTempValue.textContent = `${(weatherData.main.temp_min - 273.15).toFixed(1)}°`;
         maxTempValue.textContent = `${(weatherData.main.temp_max - 273.15).toFixed(1)}°`;
         conversionButton.textContent = 'C°';
+        if(weatherData.sys.country === undefined) {
+            locationDiv.textContent = `${weatherData.name}`;
+        }
+
         changeBgImageAccToWeather();
 
     } catch(error) {
