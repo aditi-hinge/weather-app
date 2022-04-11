@@ -945,7 +945,7 @@ async function getWeather() {
     const conversionButton = document.getElementById('conversion-button');
     
     try {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputField.value}&APPID=2d3609f8b5da6e2c0a646fefc69e2f62`,
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputField.value}&APPID=2d3609f8b5da6e2c0a646fefc69e2f62`,
         {
             mode:  'cors'
         });
@@ -963,7 +963,7 @@ async function getWeather() {
         locationDiv.textContent = `${weatherData.name} | ${weatherData.sys.country}`;
         mainWeather.textContent = `${weatherData.weather[0].main}`;
         mainWeatherDescription.textContent = `${weatherData.weather[0].description}`;
-        icon.src = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`;
+        icon.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`;
         feelsLikeValue.textContent = `${(weatherData.main.feels_like - 273.15).toFixed(1)}°`;
         humidityValue.textContent = `${weatherData.main.humidity}%`;
         pressureValue.textContent = `${weatherData.main.pressure}mb`;
