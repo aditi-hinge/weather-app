@@ -945,7 +945,7 @@ async function getWeather() {
     const conversionButton = document.getElementById('conversion-button');
     
     try {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputField.value}&APPID=2d3609f8b5da6e2c0a646fefc69e2f62`,
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputField.value}&APPID=2d3609f8b5da6e2c0a646fefc69e2f62`,
         {
             mode:  'cors'
         });
