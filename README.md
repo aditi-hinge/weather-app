@@ -17,7 +17,7 @@ You will get details like:
 Extremely easy to use comes with pretty custom backgrounds and icons, try it out today!
 
 Features:
-*Farenheit to Celcius conversion
-*Celcius to Farenheit conversion
-*Icons denoting daytime or night time at the location
-*Background image relavent to the weather conditions
+* Farenheit to Celcius conversion
+* Celcius to Farenheit conversion
+* Icons denoting daytime or night time at the location
+* Background image relavent to the weather conditions
